@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./封装一个ajax函数.js"></script>
+</head>
+
+<body>
+  <!-- 
+    http://www.liulongbin.top:3006/api/post
+
+   -->
+  <script>
+    myAjax({
+      method: 'GET',
+      url: 'http://www.liulongbin.top:3006/api/getbooks',
+      data: {
+        id: 1
+      },
+      success(res) {
+        console.log(res)
+      }
+    })
+    myAjax({
+      method: 'POST',
+      url: 'http://www.liulongbin.top:3006/api/addbook',
+      data: {
+        bookname: '明朝那些事er',
+        author: '当年明月',
+        publisher: '天津教育出版社'
+      },
+      success(res) {
+        console.log(res)
+      }
+    })
+  </script>
+</body>
+
+</html>
